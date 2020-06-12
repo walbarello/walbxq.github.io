@@ -1,0 +1,35 @@
+name: "Quils in Space"
+highlighter: rouge
+markdown: kramdown
+exclude:
+  - node_modules
+  - vendor
+  
+plugins:
+  - jekyll-redirect-from
+
+navigation:
+  - text: Home
+    url: /index.html
+    group: home
+  - text: Articles
+    url: /chronological
+    group: blog
+  - text: Art
+    url: https://www.instagram.com/q.teatime/
+    group: art
+  - text: About
+    url: /about
+    group: about
+
+collections:
+  series:
+    output: false
+
+defaults:
+  - scope:
+      path: _posts
+      type: posts
+    values:
+      group: blog
+      permalink: /articles/:year/:title/
